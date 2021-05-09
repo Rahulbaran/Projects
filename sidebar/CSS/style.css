@@ -1,0 +1,203 @@
+@font-face {
+    font-family:Roboto-Regular ;
+    src: url(../../../Font/Roboto-Regular.ttf);
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    font:calc(0.9rem + 0.3vw)/1.3 Roboto-Regular,sans-serif;
+    background:repeating-linear-gradient(0.5turn,rgb(221, 221, 255) 3px,transparent 9px,#fff 15px,transparent 21px),
+               repeating-linear-gradient(90deg ,rgb(221, 242, 255) 3px,transparent 9px,rgb(255,255,255) 15px,transparent 21px);
+    position:relative;
+}
+body::-webkit-scrollbar {
+    background-color:rgb(255, 255, 255);
+    box-shadow: 5px 0px 10px rgba(0,0,0,0.4) inset;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color:rgb(12, 12, 34);
+}
+
+/*=================sidebar================= */
+.sidebar {
+    height:100vh;
+    position:fixed;
+    z-index:10;
+    background-color:#fff;
+    width:450px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.5);
+    transform:translateX(-470px);
+    transition:transform 500ms;
+}
+
+/* ---------logo and close button section-------- */
+.LogoAndCloseBtn {
+    display:flex;
+    justify-content: space-between;
+    align-items:Center;
+    padding:2em 1em 1em;
+}
+.logo {
+    font-size:calc(1.5rem + 0.5vw);
+    font-weight: 600;
+    font-family: 'Lora', serif;
+    letter-spacing: 0.05em;
+    color:rgb(13, 22, 24);
+    text-shadow:3px 3px 5px rgba(0,0,0,0.5);
+    margin-left:0.5em;
+}
+.close-btn {
+    margin-left:0.5em;}
+.close-btn i {
+    font-size:calc( 1.2rem + 0.5vw);
+    color:brown;
+    opacity:0.7;
+    transition:opacity 500ms,transform 500ms;
+}
+.close-btn i:hover {
+    transform:rotateZ(-360deg);
+    opacity:1;
+    transition:500ms;
+    cursor:pointer;
+}
+/* ---------navigation bar----------- */
+nav {
+    margin-top:1em;
+    margin-bottom:1em;
+    width:100%;
+}
+.navigation-bar {
+    list-style-type:none;
+}
+.navigation-bar li {
+    padding:1em 0 1em 2em;
+    background-color:rgb(245, 245, 245);
+    margin-bottom:0.3rem;
+    transition:background-color 300ms,padding 300ms;
+}
+.navigation-bar li:hover {
+    background-color:rgb(221, 221, 221);
+    padding:1em 0 1em 2.5em;
+    transition:300ms;
+}
+.nav-link{
+    text-decoration:none;
+    font-size:calc(1rem + 0.3vw);
+    font-family:'Lucida sans',sans-serif;
+    /* font-weight: 600; */
+    padding:0.5em 0;    
+    color:rgb(90, 138, 226);
+}
+.nav-link:hover {
+    color:rgb(52, 102, 196);
+}
+
+/* --------social links--------- */
+.social-icons {
+    position:absolute;
+    bottom:3em;
+    left:5%;
+    right:5%;
+    text-align:Center;
+}
+.social-link {
+    color:cornflowerblue;
+    font-size:calc(1.3rem + 0.5vw);
+    margin:0.1em 0.3em;
+    transition:color 500ms;
+}
+.social-link:hover {
+    color:rgb(59, 43, 204);
+    transition:500ms;
+}
+
+
+
+/* **********media query for smaller screen********* */
+
+/* when landscape mode is on */
+@media only screen and (max-device-width:840px) and (orientation:landscape)  {
+    .links {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .logo {
+        margin-left:0;
+    }
+    nav {
+        width:50%;
+        margin-top:0;
+    }
+    .navigation-bar li {
+        padding:0.8em 1em;
+        background:none;
+    }
+    .navigation-bar li:hover {
+        padding:0.8em 1em 0.8em 1.5em;
+        background:none;
+    }
+
+    .social-icons {
+        position:Relative;
+        width:50%;
+       display:flex;
+       flex-direction:column;
+       align-items:flex-end;
+       margin-top:4.5em;
+       margin-right:3em;
+    }
+}
+
+/* for landscape mode and screen size uptp 650px
+@media (orientation:landscape) and (max-width:650px) {
+    .sidebar {
+        width:100%;
+    }
+} */
+
+/* for portrait mode and screen size 550px */
+@media (max-width:550px) {
+    .sidebar {
+        width:100%;
+        transform:translateX(-104%);
+    }
+
+}
+
+
+/* ========hamburger icon for closing the side========== */
+.hamburger-icon {
+    background-color:white;
+    padding:1em 2em;
+    box-shadow:0 3px 10px rgba(0,0,0,0.3);
+    display:flex;
+    justify-content:flex-end;
+}
+.hamburger-icon i {
+    font-size: 1.5rem;
+    color:darkcyan;
+    transition:transform 300ms;
+}
+.hamburger-icon i:hover {
+    cursor:pointer;
+    transform:scale(1.4);
+    transition:300ms;
+}
+
+/* translating sidebar on clicked */
+.sidebar-control {
+    transform:translateX(0);
+    transition:transform 500ms;
+}

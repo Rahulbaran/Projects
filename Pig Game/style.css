@@ -1,0 +1,123 @@
+html {
+    scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body {
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height:1.3;
+    background-color:bisque;
+    /* display:flex;
+    justify-content: center;
+    align-items: center; */
+}
+.wrapper {
+    background-color:#fff;
+    width:min(80%,720px);
+    margin:0 auto;
+    transform:translateY(10%);
+    box-shadow:0 0 10px 5px rgba(0,0,0,0.2);
+    position:relative;
+    padding:3em 1em;
+}
+/* =======PLAYERS======== */
+.player-0-panel
+ {
+    float:left;
+    margin-left:4em; 
+}
+.player-1-panel {
+    float:right;
+    margin-right:4em;
+}
+.player-0-panel,
+.player-1-panel {
+    text-align: center;
+    margin-top:2em;
+}
+.player-name {
+    font-size: 2.5rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:600;
+    margin-bottom:1em;
+}
+.active {
+    color:red;
+}
+.player-score {
+    font-size:3rem;
+    margin-bottom:1em;
+}
+.player-current-box {
+    background-color:rgb(236, 236, 236);
+    padding:1em 0;
+    font-family:'Lucida Sans',sans-serif;
+    font-size:1.3rem;
+    font-weight:600;
+}
+.player-current-label {
+    color:rgb(44, 98, 199);
+}
+.player-current-score {
+    margin-top:0.3em;
+    color:rgb(29, 36, 46);
+}
+
+
+/* =========buttons related stuffs */
+
+
+button:not(.btn-new) {
+
+    display:flex;
+    clear:both;
+    width:min(20%,120px);
+    margin:0 auto;
+}
+.btn-new {
+    position:absolute;
+    top:3%;
+    left:43%;
+}
+button {
+    background:none;
+    border:none;
+    outline:none;
+    font-size:1rem;
+    font-family:'Lucida Sans',sans-serif;
+    cursor:pointer;
+}
+.btn-roll,
+.btn-hold {
+    padding:0.5em 1em;
+}
+i {
+    padding:0 0.2em;
+    color:rgb(199, 54, 54);
+}
+button:hover,
+button:focus {
+    transform:scale(1.05);
+}
+/* ============dice============ */
+.dice {
+    width:100px;
+    position:absolute;
+    top:30%;
+    left:43%;
+}
+
+/* ========setscore============= */
+.setscore {
+    position:absolute;
+    bottom:0;
+    left:38%;
+    margin:1em 0;
+    padding:0.3em;
+}
