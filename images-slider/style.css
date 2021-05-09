@@ -48,7 +48,7 @@ img {
 }
 .buttons i:hover {
     cursor:pointer;
-    background-color:rgb(31, 25, 48);
+    background-color:rgb(31, 25, 49);
     color:#fff;
     transition:color 400ms,background-color 400ms;
 }
