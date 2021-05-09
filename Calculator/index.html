@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link rel="shortcut icon" href="Images/favourite icon.png" type="image/png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <!-------------------calculator-------------------->
+    <section class="calculator">
+        <!-- screen -->
+        <div class="screen-container">
+            <input type="text" class="screen" placeholder="Calculation Display">
+        </div>
+
+        <!-------------------buttons-------------------->
+        <div class="buttons">
+            <div class="section-1">
+                <button data-value="1" class="btn one">1</button>
+                <button data-value="2" class="btn two">2</button>
+                <button data-value="3" class="btn three">3</button>
+                <button data-value="4" class="btn four">4</button>
+                <button data-value="5" class="btn five">5</button>
+                <button data-value="6" class="btn six">6</button>
+                <button data-value="7" class="btn seven">7</button>
+                <button data-value="8" class="btn eight">8</button>
+                <button data-value="9" class="btn nine">9</button>
+                <button data-value="0" class="btn zero">0</button>
+                <button data-value="." class="btn dot">.</button>
+                <button data-equal="=" class="equal">=</button>
+                <!-- data-* is used to create custom attributes-->
+            </div>
+            <div class="section-2">
+                <button class="clear">C</button>
+                <button data-value = "+" class="btn  operator-btn">+</button>
+                <button data-value = "-" class="btn operator-btn">-</button>
+                <button data-value = "*" class="btn operator-btn">*</button>
+                <button data-value = "/" class="btn operator-btn">/</button>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>
